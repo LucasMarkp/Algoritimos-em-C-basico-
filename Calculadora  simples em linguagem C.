@@ -1,0 +1,148 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+
+void soma(){
+	
+	int n1, n2, total;
+	
+
+	printf("\n---ESCOLHEU SOMA---\n\n");
+	printf("ENTRE COM O PRIMEIRO NUMERO:");
+		scanf("%d",&n1);
+	
+	printf("ENTRE COM SEGUNDO NUMERO:");
+		scanf("%d",&n2);
+	
+	total = n1 + n2;
+	
+	
+	printf("A RESPOSTA E %d",total);
+	
+	menu();
+	
+	
+}
+
+void sub(){
+	
+		int n1, n2, total;
+	
+	
+	printf("\n---ESCOLHEU SUBTRACAO---\n\n");
+	printf("ENTRE COM O PRIMEIRO NUMERO:");
+		scanf("%d",&n1);
+	
+	printf("ENTRE COM SEGUNDO NUMERO:");
+		scanf("%d",&n2);
+	
+	total = n1 - n2;
+	
+	
+	printf("A RESPOSTA E %d",total);
+	
+	menu();
+	
+}
+
+void divi(){
+	
+	int n1, n2, total;
+	
+	
+	printf("\n---ESCOLHEU DIVISAO---\n\n");
+	printf("ENTRE COM O PRIMEIRO NUMERO:");
+		scanf("%d",&n1);
+	
+	printf("ENTRE COM SEGUNDO NUMERO:");
+		scanf("%d",&n2);
+	
+	total = n1 / n2;
+	
+	
+	printf("A RESPOSTA E %d",total);
+	
+	menu();
+	
+	
+}
+
+void multi(){
+		
+		int n1, n2, total;
+	
+	
+	printf("\n---ESCOLHEU MULTIPLICACAO---\n\n");
+	printf("ENTRE COM O PRIMEIRO NUMERO:");
+		scanf("%d",&n1);
+	
+	printf("ENTRE COM SEGUNDO NUMERO:");
+		scanf("%d",&n2);
+	
+	total = n1 * n2;
+	
+	
+	printf("A RESPOSTA E %d",total);
+	
+	menu();
+	
+}
+
+void  eMenu(){
+	
+	printf("1-)SOMA:\n");
+	printf("2-)SUBITRACAO:\n");
+	printf("3-)DIVISAO:\n");
+	printf("4-)MULTIPLAICAO:\n");
+	printf("0-)SAIR:\n");
+
+}
+
+void menu(){
+	int op;
+	
+	printf("\n---BEM VINDO AO SISTEMA DE CALCULADORA BASICA---\n\n");
+		
+		eMenu();
+	
+		scanf("%d",&op);
+		
+	while(op != 5){
+		
+		switch(op){
+			
+			case 1:{
+				soma();
+				break;
+			}
+			case 2:{
+				sub();
+				break;
+			}
+			case 3:{
+				divi();
+				break;
+			}
+			case 4:{
+				multi();
+				break;
+			}
+			case  0:{
+				printf("\nSAIU DO SISTEMA:\n");
+				return 0;
+				break;
+			}
+			default:{
+				break;
+			}
+		}
+	}
+	
+}
+
+int main(){
+
+	menu();
+	
+}
